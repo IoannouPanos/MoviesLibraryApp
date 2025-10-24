@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             btnEditSelectImage = new Button();
-            dtpWatchedDate = new DateTimePicker();
-            dtpPublishDate = new DateTimePicker();
+            dtpEditWatchedDate = new DateTimePicker();
+            dtpEditPublishDate = new DateTimePicker();
             label5 = new Label();
             gbWatched = new GroupBox();
             rdBtnNo = new RadioButton();
             rdBtnYes = new RadioButton();
-            pictureBox = new PictureBox();
-            cmbMedia = new ComboBox();
-            cmbCategory = new ComboBox();
+            pictureBoxEdit = new PictureBox();
+            cmbEditMedia = new ComboBox();
+            cmbEditCategory = new ComboBox();
             label9 = new Label();
             label8 = new Label();
-            txtRating = new TextBox();
+            txtEditRating = new TextBox();
             label7 = new Label();
-            txtActors = new TextBox();
+            txtEditActors = new TextBox();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            txtTitle = new TextBox();
+            txtEditTitle = new TextBox();
             btnEditSave = new Button();
             btnEditCancel = new Button();
             gbWatched.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).BeginInit();
             SuspendLayout();
             // 
             // btnEditSelectImage
@@ -66,21 +66,21 @@
             btnEditSelectImage.Text = "Επιλογή Εικόνας";
             btnEditSelectImage.UseVisualStyleBackColor = false;
             // 
-            // dtpWatchedDate
+            // dtpEditWatchedDate
             // 
-            dtpWatchedDate.Format = DateTimePickerFormat.Short;
-            dtpWatchedDate.Location = new Point(236, 337);
-            dtpWatchedDate.Name = "dtpWatchedDate";
-            dtpWatchedDate.Size = new Size(166, 23);
-            dtpWatchedDate.TabIndex = 46;
+            dtpEditWatchedDate.Format = DateTimePickerFormat.Short;
+            dtpEditWatchedDate.Location = new Point(236, 337);
+            dtpEditWatchedDate.Name = "dtpEditWatchedDate";
+            dtpEditWatchedDate.Size = new Size(166, 23);
+            dtpEditWatchedDate.TabIndex = 46;
             // 
-            // dtpPublishDate
+            // dtpEditPublishDate
             // 
-            dtpPublishDate.Format = DateTimePickerFormat.Short;
-            dtpPublishDate.Location = new Point(25, 150);
-            dtpPublishDate.Name = "dtpPublishDate";
-            dtpPublishDate.Size = new Size(186, 23);
-            dtpPublishDate.TabIndex = 45;
+            dtpEditPublishDate.Format = DateTimePickerFormat.Short;
+            dtpEditPublishDate.Location = new Point(25, 150);
+            dtpEditPublishDate.Name = "dtpEditPublishDate";
+            dtpEditPublishDate.Size = new Size(186, 23);
+            dtpEditPublishDate.TabIndex = 45;
             // 
             // label5
             // 
@@ -126,30 +126,30 @@
             rdBtnYes.Text = "Ναι";
             rdBtnYes.UseVisualStyleBackColor = true;
             // 
-            // pictureBox
+            // pictureBoxEdit
             // 
-            pictureBox.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox.Location = new Point(423, 77);
-            pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(219, 239);
-            pictureBox.TabIndex = 42;
-            pictureBox.TabStop = false;
+            pictureBoxEdit.BorderStyle = BorderStyle.Fixed3D;
+            pictureBoxEdit.Location = new Point(423, 77);
+            pictureBoxEdit.Name = "pictureBoxEdit";
+            pictureBoxEdit.Size = new Size(219, 239);
+            pictureBoxEdit.TabIndex = 42;
+            pictureBoxEdit.TabStop = false;
             // 
-            // cmbMedia
+            // cmbEditMedia
             // 
-            cmbMedia.FormattingEnabled = true;
-            cmbMedia.Location = new Point(236, 206);
-            cmbMedia.Name = "cmbMedia";
-            cmbMedia.Size = new Size(166, 23);
-            cmbMedia.TabIndex = 41;
+            cmbEditMedia.FormattingEnabled = true;
+            cmbEditMedia.Location = new Point(236, 206);
+            cmbEditMedia.Name = "cmbEditMedia";
+            cmbEditMedia.Size = new Size(166, 23);
+            cmbEditMedia.TabIndex = 41;
             // 
-            // cmbCategory
+            // cmbEditCategory
             // 
-            cmbCategory.FormattingEnabled = true;
-            cmbCategory.Location = new Point(236, 150);
-            cmbCategory.Name = "cmbCategory";
-            cmbCategory.Size = new Size(166, 23);
-            cmbCategory.TabIndex = 40;
+            cmbEditCategory.FormattingEnabled = true;
+            cmbEditCategory.Location = new Point(236, 150);
+            cmbEditCategory.Name = "cmbEditCategory";
+            cmbEditCategory.Size = new Size(166, 23);
+            cmbEditCategory.TabIndex = 40;
             // 
             // label9
             // 
@@ -171,12 +171,12 @@
             label8.TabIndex = 38;
             label8.Text = "IMDB βαθμολογία";
             // 
-            // txtRating
+            // txtEditRating
             // 
-            txtRating.Location = new Point(236, 274);
-            txtRating.Name = "txtRating";
-            txtRating.Size = new Size(166, 23);
-            txtRating.TabIndex = 37;
+            txtEditRating.Location = new Point(236, 274);
+            txtEditRating.Name = "txtEditRating";
+            txtEditRating.Size = new Size(166, 23);
+            txtEditRating.TabIndex = 37;
             // 
             // label7
             // 
@@ -188,13 +188,13 @@
             label7.TabIndex = 36;
             label7.Text = "Πρωταγωνιστές";
             // 
-            // txtActors
+            // txtEditActors
             // 
-            txtActors.Location = new Point(25, 206);
-            txtActors.Multiline = true;
-            txtActors.Name = "txtActors";
-            txtActors.Size = new Size(186, 91);
-            txtActors.TabIndex = 35;
+            txtEditActors.Location = new Point(25, 206);
+            txtEditActors.Multiline = true;
+            txtEditActors.Name = "txtEditActors";
+            txtEditActors.Size = new Size(186, 91);
+            txtEditActors.TabIndex = 35;
             // 
             // label4
             // 
@@ -236,13 +236,13 @@
             label1.TabIndex = 31;
             label1.Text = "Τίτλος";
             // 
-            // txtTitle
+            // txtEditTitle
             // 
-            txtTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            txtTitle.Location = new Point(25, 77);
-            txtTitle.Name = "txtTitle";
-            txtTitle.Size = new Size(380, 29);
-            txtTitle.TabIndex = 30;
+            txtEditTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtEditTitle.Location = new Point(25, 77);
+            txtEditTitle.Name = "txtEditTitle";
+            txtEditTitle.Size = new Size(380, 29);
+            txtEditTitle.TabIndex = 30;
             // 
             // btnEditSave
             // 
@@ -279,29 +279,29 @@
             Controls.Add(btnEditCancel);
             Controls.Add(btnEditSave);
             Controls.Add(btnEditSelectImage);
-            Controls.Add(dtpWatchedDate);
-            Controls.Add(dtpPublishDate);
+            Controls.Add(dtpEditWatchedDate);
+            Controls.Add(dtpEditPublishDate);
             Controls.Add(label5);
             Controls.Add(gbWatched);
-            Controls.Add(pictureBox);
-            Controls.Add(cmbMedia);
-            Controls.Add(cmbCategory);
+            Controls.Add(pictureBoxEdit);
+            Controls.Add(cmbEditMedia);
+            Controls.Add(cmbEditCategory);
             Controls.Add(label9);
             Controls.Add(label8);
-            Controls.Add(txtRating);
+            Controls.Add(txtEditRating);
             Controls.Add(label7);
-            Controls.Add(txtActors);
+            Controls.Add(txtEditActors);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(txtTitle);
+            Controls.Add(txtEditTitle);
             Name = "MovieEditForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Επεξεργασία Ταινίας";
             gbWatched.ResumeLayout(false);
             gbWatched.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -309,25 +309,25 @@
         #endregion
 
         private Button btnEditSelectImage;
-        private DateTimePicker dtpWatchedDate;
-        private DateTimePicker dtpPublishDate;
+        private DateTimePicker dtpEditWatchedDate;
+        private DateTimePicker dtpEditPublishDate;
         private Label label5;
         private GroupBox gbWatched;
         private RadioButton rdBtnNo;
         private RadioButton rdBtnYes;
-        private PictureBox pictureBox;
-        private ComboBox cmbMedia;
-        private ComboBox cmbCategory;
+        private PictureBox pictureBoxEdit;
+        private ComboBox cmbEditMedia;
+        private ComboBox cmbEditCategory;
         private Label label9;
         private Label label8;
-        private TextBox txtRating;
+        private TextBox txtEditRating;
         private Label label7;
-        private TextBox txtActors;
+        private TextBox txtEditActors;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox txtTitle;
+        private TextBox txtEditTitle;
         private Button btnEditSave;
         private Button btnEditCancel;
     }
