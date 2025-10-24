@@ -269,6 +269,7 @@
             btnEditCancel.TabIndex = 49;
             btnEditCancel.Text = "Άκυρο";
             btnEditCancel.UseVisualStyleBackColor = false;
+
             // 
             // MovieEditForm
             // 
@@ -299,6 +300,7 @@
             Name = "MovieEditForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Επεξεργασία Ταινίας";
+            Load += MovieEditForm_Load;
             gbWatched.ResumeLayout(false);
             gbWatched.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).EndInit();

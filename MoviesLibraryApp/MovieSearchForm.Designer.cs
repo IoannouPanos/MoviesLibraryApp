@@ -209,7 +209,7 @@
             dgvSearchResult.Name = "dgvSearchResult";
             dgvSearchResult.Size = new Size(666, 188);
             dgvSearchResult.TabIndex = 25;
-            dgvSearchResult.CellDoubleClick += dgvSearchResult_CellDoubleClick;
+
             // 
             // MovieSearchForm
             // 

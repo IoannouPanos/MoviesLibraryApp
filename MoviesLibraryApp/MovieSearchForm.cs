@@ -198,40 +198,6 @@ namespace MoviesLibraryApp
 
         }
 
-        private void dgvSearchResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //MovieEditForm frm = new MovieEditForm();
-            //frm.Show();
-
-
-
-            if(e.RowIndex >= 0)
-            {
-                // Πάρε τα δεδομένα της επιλεγμένης ταινίας
-                DataGridViewRow row = dgvSearchResult.Rows[e.RowIndex];
-
-                // Δημιούργησε και άνοιξε τη φόρμα επεξεργασίας
-                MovieEditForm editForm = new MovieEditForm();
-
-                // Πέρασε τα δεδομένα στη φόρμα
-                editForm.MovieId = Convert.ToInt32(row.Cells["Id"].Value);
-                editForm.Title = row.Cells["Title"].Value.ToString();
-                editForm.Genre = row.Cells["Genre"].Value.ToString();
-                editForm.ReleaseDate = Convert.ToDateTime(row.Cells["ReleaseDate"].Value);
-
-                editForm.ShowDialog();
-
-                // Αν έγινε αποθήκευση, ανανέωσε το grid
-                if (editForm.DialogResult == DialogResult.OK)
-                {
-                    LoadMovies(); // μέθοδος που ξαναφορτώνει το grid
-                }
-            }
-
-
-
-
-        }
     }
 
 }
