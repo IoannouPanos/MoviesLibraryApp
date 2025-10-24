@@ -50,6 +50,8 @@
             txtEditTitle = new TextBox();
             btnEditSave = new Button();
             btnEditCancel = new Button();
+            cmbSelectMovie = new ComboBox();
+            label6 = new Label();
             gbWatched.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).BeginInit();
             SuspendLayout();
@@ -59,7 +61,7 @@
             btnEditSelectImage.BackColor = Color.White;
             btnEditSelectImage.Cursor = Cursors.Hand;
             btnEditSelectImage.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            btnEditSelectImage.Location = new Point(423, 324);
+            btnEditSelectImage.Location = new Point(423, 376);
             btnEditSelectImage.Name = "btnEditSelectImage";
             btnEditSelectImage.Size = new Size(219, 36);
             btnEditSelectImage.TabIndex = 47;
@@ -69,7 +71,7 @@
             // dtpEditWatchedDate
             // 
             dtpEditWatchedDate.Format = DateTimePickerFormat.Short;
-            dtpEditWatchedDate.Location = new Point(236, 337);
+            dtpEditWatchedDate.Location = new Point(236, 389);
             dtpEditWatchedDate.Name = "dtpEditWatchedDate";
             dtpEditWatchedDate.Size = new Size(166, 23);
             dtpEditWatchedDate.TabIndex = 46;
@@ -77,7 +79,7 @@
             // dtpEditPublishDate
             // 
             dtpEditPublishDate.Format = DateTimePickerFormat.Short;
-            dtpEditPublishDate.Location = new Point(25, 150);
+            dtpEditPublishDate.Location = new Point(25, 202);
             dtpEditPublishDate.Name = "dtpEditPublishDate";
             dtpEditPublishDate.Size = new Size(186, 23);
             dtpEditPublishDate.TabIndex = 45;
@@ -86,7 +88,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label5.Location = new Point(236, 314);
+            label5.Location = new Point(236, 366);
             label5.Name = "label5";
             label5.Size = new Size(166, 20);
             label5.TabIndex = 44;
@@ -97,7 +99,7 @@
             gbWatched.Controls.Add(rdBtnNo);
             gbWatched.Controls.Add(rdBtnYes);
             gbWatched.Cursor = Cursors.Hand;
-            gbWatched.Location = new Point(25, 309);
+            gbWatched.Location = new Point(25, 361);
             gbWatched.Name = "gbWatched";
             gbWatched.Size = new Size(186, 51);
             gbWatched.TabIndex = 43;
@@ -129,16 +131,16 @@
             // pictureBoxEdit
             // 
             pictureBoxEdit.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxEdit.Location = new Point(423, 77);
+            pictureBoxEdit.Location = new Point(423, 59);
             pictureBoxEdit.Name = "pictureBoxEdit";
-            pictureBoxEdit.Size = new Size(219, 239);
+            pictureBoxEdit.Size = new Size(219, 309);
             pictureBoxEdit.TabIndex = 42;
             pictureBoxEdit.TabStop = false;
             // 
             // cmbEditMedia
             // 
             cmbEditMedia.FormattingEnabled = true;
-            cmbEditMedia.Location = new Point(236, 206);
+            cmbEditMedia.Location = new Point(236, 258);
             cmbEditMedia.Name = "cmbEditMedia";
             cmbEditMedia.Size = new Size(166, 23);
             cmbEditMedia.TabIndex = 41;
@@ -146,7 +148,7 @@
             // cmbEditCategory
             // 
             cmbEditCategory.FormattingEnabled = true;
-            cmbEditCategory.Location = new Point(236, 150);
+            cmbEditCategory.Location = new Point(236, 202);
             cmbEditCategory.Name = "cmbEditCategory";
             cmbEditCategory.Size = new Size(166, 23);
             cmbEditCategory.TabIndex = 40;
@@ -155,7 +157,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label9.Location = new Point(236, 183);
+            label9.Location = new Point(236, 235);
             label9.Name = "label9";
             label9.Size = new Size(120, 20);
             label9.TabIndex = 39;
@@ -165,7 +167,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label8.Location = new Point(236, 251);
+            label8.Location = new Point(236, 303);
             label8.Name = "label8";
             label8.Size = new Size(131, 20);
             label8.TabIndex = 38;
@@ -173,7 +175,7 @@
             // 
             // txtEditRating
             // 
-            txtEditRating.Location = new Point(236, 274);
+            txtEditRating.Location = new Point(236, 326);
             txtEditRating.Name = "txtEditRating";
             txtEditRating.Size = new Size(166, 23);
             txtEditRating.TabIndex = 37;
@@ -182,7 +184,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label7.Location = new Point(25, 183);
+            label7.Location = new Point(25, 235);
             label7.Name = "label7";
             label7.Size = new Size(119, 20);
             label7.TabIndex = 36;
@@ -190,7 +192,7 @@
             // 
             // txtEditActors
             // 
-            txtEditActors.Location = new Point(25, 206);
+            txtEditActors.Location = new Point(25, 258);
             txtEditActors.Multiline = true;
             txtEditActors.Name = "txtEditActors";
             txtEditActors.Size = new Size(186, 91);
@@ -200,7 +202,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label4.Location = new Point(236, 127);
+            label4.Location = new Point(236, 179);
             label4.Name = "label4";
             label4.Size = new Size(82, 20);
             label4.TabIndex = 34;
@@ -210,7 +212,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label3.Location = new Point(25, 127);
+            label3.Location = new Point(25, 179);
             label3.Name = "label3";
             label3.Size = new Size(186, 20);
             label3.TabIndex = 33;
@@ -229,17 +231,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label1.Location = new Point(25, 53);
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label1.Location = new Point(25, 105);
             label1.Name = "label1";
-            label1.Size = new Size(51, 20);
+            label1.Size = new Size(44, 17);
             label1.TabIndex = 31;
             label1.Text = "Τίτλος";
             // 
             // txtEditTitle
             // 
             txtEditTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            txtEditTitle.Location = new Point(25, 77);
+            txtEditTitle.Location = new Point(22, 125);
             txtEditTitle.Name = "txtEditTitle";
             txtEditTitle.Size = new Size(380, 29);
             txtEditTitle.TabIndex = 30;
@@ -250,7 +252,7 @@
             btnEditSave.BackColor = Color.White;
             btnEditSave.Cursor = Cursors.Hand;
             btnEditSave.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            btnEditSave.Location = new Point(25, 381);
+            btnEditSave.Location = new Point(25, 428);
             btnEditSave.Name = "btnEditSave";
             btnEditSave.Size = new Size(617, 36);
             btnEditSave.TabIndex = 48;
@@ -263,20 +265,41 @@
             btnEditCancel.BackColor = Color.White;
             btnEditCancel.Cursor = Cursors.Hand;
             btnEditCancel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            btnEditCancel.Location = new Point(25, 423);
+            btnEditCancel.Location = new Point(25, 470);
             btnEditCancel.Name = "btnEditCancel";
             btnEditCancel.Size = new Size(617, 36);
             btnEditCancel.TabIndex = 49;
             btnEditCancel.Text = "Άκυρο";
             btnEditCancel.UseVisualStyleBackColor = false;
-
+            // 
+            // cmbSelectMovie
+            // 
+            cmbSelectMovie.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            cmbSelectMovie.FormattingEnabled = true;
+            cmbSelectMovie.Location = new Point(22, 67);
+            cmbSelectMovie.Name = "cmbSelectMovie";
+            cmbSelectMovie.Size = new Size(377, 28);
+            cmbSelectMovie.TabIndex = 50;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            label6.Location = new Point(25, 47);
+            label6.Name = "label6";
+            label6.Size = new Size(96, 17);
+            label6.TabIndex = 51;
+            label6.Text = "Επίλεξε Ταινία";
             // 
             // MovieEditForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(664, 470);
+            ClientSize = new Size(664, 518);
+            ControlBox = false;
+            Controls.Add(label6);
+            Controls.Add(cmbSelectMovie);
             Controls.Add(btnEditCancel);
             Controls.Add(btnEditSave);
             Controls.Add(btnEditSelectImage);
@@ -300,6 +323,7 @@
             Name = "MovieEditForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Επεξεργασία Ταινίας";
+            WindowState = FormWindowState.Maximized;
             Load += MovieEditForm_Load;
             gbWatched.ResumeLayout(false);
             gbWatched.PerformLayout();
@@ -332,5 +356,7 @@
         private TextBox txtEditTitle;
         private Button btnEditSave;
         private Button btnEditCancel;
+        private ComboBox cmbSelectMovie;
+        private Label label6;
     }
 }

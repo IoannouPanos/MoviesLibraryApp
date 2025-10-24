@@ -40,8 +40,6 @@ namespace MoviesLibraryApp
             cmbMovies.DisplayMember = "Title";
             cmbMovies.ValueMember = "Id";
             cmbMovies.SelectedIndex = -1; // κανένα default
-
-
         }
 
 
