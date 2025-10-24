@@ -1,0 +1,334 @@
+﻿namespace MoviesLibraryApp
+{
+    partial class MovieEditForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            btnEditSelectImage = new Button();
+            dtpWatchedDate = new DateTimePicker();
+            dtpPublishDate = new DateTimePicker();
+            label5 = new Label();
+            gbWatched = new GroupBox();
+            rdBtnNo = new RadioButton();
+            rdBtnYes = new RadioButton();
+            pictureBox = new PictureBox();
+            cmbMedia = new ComboBox();
+            cmbCategory = new ComboBox();
+            label9 = new Label();
+            label8 = new Label();
+            txtRating = new TextBox();
+            label7 = new Label();
+            txtActors = new TextBox();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtTitle = new TextBox();
+            btnEditSave = new Button();
+            btnEditCancel = new Button();
+            gbWatched.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox).BeginInit();
+            SuspendLayout();
+            // 
+            // btnEditSelectImage
+            // 
+            btnEditSelectImage.BackColor = Color.White;
+            btnEditSelectImage.Cursor = Cursors.Hand;
+            btnEditSelectImage.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            btnEditSelectImage.Location = new Point(423, 324);
+            btnEditSelectImage.Name = "btnEditSelectImage";
+            btnEditSelectImage.Size = new Size(219, 36);
+            btnEditSelectImage.TabIndex = 47;
+            btnEditSelectImage.Text = "Επιλογή Εικόνας";
+            btnEditSelectImage.UseVisualStyleBackColor = false;
+            // 
+            // dtpWatchedDate
+            // 
+            dtpWatchedDate.Format = DateTimePickerFormat.Short;
+            dtpWatchedDate.Location = new Point(236, 337);
+            dtpWatchedDate.Name = "dtpWatchedDate";
+            dtpWatchedDate.Size = new Size(166, 23);
+            dtpWatchedDate.TabIndex = 46;
+            // 
+            // dtpPublishDate
+            // 
+            dtpPublishDate.Format = DateTimePickerFormat.Short;
+            dtpPublishDate.Location = new Point(25, 150);
+            dtpPublishDate.Name = "dtpPublishDate";
+            dtpPublishDate.Size = new Size(186, 23);
+            dtpPublishDate.TabIndex = 45;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label5.Location = new Point(236, 314);
+            label5.Name = "label5";
+            label5.Size = new Size(166, 20);
+            label5.TabIndex = 44;
+            label5.Text = "Ημερομηνία Προβολής";
+            // 
+            // gbWatched
+            // 
+            gbWatched.Controls.Add(rdBtnNo);
+            gbWatched.Controls.Add(rdBtnYes);
+            gbWatched.Cursor = Cursors.Hand;
+            gbWatched.Location = new Point(25, 309);
+            gbWatched.Name = "gbWatched";
+            gbWatched.Size = new Size(186, 51);
+            gbWatched.TabIndex = 43;
+            gbWatched.TabStop = false;
+            gbWatched.Text = "Την Έχω δει";
+            // 
+            // rdBtnNo
+            // 
+            rdBtnNo.AutoSize = true;
+            rdBtnNo.Location = new Point(102, 22);
+            rdBtnNo.Name = "rdBtnNo";
+            rdBtnNo.Size = new Size(44, 19);
+            rdBtnNo.TabIndex = 1;
+            rdBtnNo.TabStop = true;
+            rdBtnNo.Text = "Όχι";
+            rdBtnNo.UseVisualStyleBackColor = true;
+            // 
+            // rdBtnYes
+            // 
+            rdBtnYes.AutoSize = true;
+            rdBtnYes.Location = new Point(20, 22);
+            rdBtnYes.Name = "rdBtnYes";
+            rdBtnYes.Size = new Size(44, 19);
+            rdBtnYes.TabIndex = 0;
+            rdBtnYes.TabStop = true;
+            rdBtnYes.Text = "Ναι";
+            rdBtnYes.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox
+            // 
+            pictureBox.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox.Location = new Point(423, 77);
+            pictureBox.Name = "pictureBox";
+            pictureBox.Size = new Size(219, 239);
+            pictureBox.TabIndex = 42;
+            pictureBox.TabStop = false;
+            // 
+            // cmbMedia
+            // 
+            cmbMedia.FormattingEnabled = true;
+            cmbMedia.Location = new Point(236, 206);
+            cmbMedia.Name = "cmbMedia";
+            cmbMedia.Size = new Size(166, 23);
+            cmbMedia.TabIndex = 41;
+            // 
+            // cmbCategory
+            // 
+            cmbCategory.FormattingEnabled = true;
+            cmbCategory.Location = new Point(236, 150);
+            cmbCategory.Name = "cmbCategory";
+            cmbCategory.Size = new Size(166, 23);
+            cmbCategory.TabIndex = 40;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label9.Location = new Point(236, 183);
+            label9.Name = "label9";
+            label9.Size = new Size(120, 20);
+            label9.TabIndex = 39;
+            label9.Text = "Μέσο Προβολής";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label8.Location = new Point(236, 251);
+            label8.Name = "label8";
+            label8.Size = new Size(131, 20);
+            label8.TabIndex = 38;
+            label8.Text = "IMDB βαθμολογία";
+            // 
+            // txtRating
+            // 
+            txtRating.Location = new Point(236, 274);
+            txtRating.Name = "txtRating";
+            txtRating.Size = new Size(166, 23);
+            txtRating.TabIndex = 37;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label7.Location = new Point(25, 183);
+            label7.Name = "label7";
+            label7.Size = new Size(119, 20);
+            label7.TabIndex = 36;
+            label7.Text = "Πρωταγωνιστές";
+            // 
+            // txtActors
+            // 
+            txtActors.Location = new Point(25, 206);
+            txtActors.Multiline = true;
+            txtActors.Name = "txtActors";
+            txtActors.Size = new Size(186, 91);
+            txtActors.TabIndex = 35;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label4.Location = new Point(236, 127);
+            label4.Name = "label4";
+            label4.Size = new Size(82, 20);
+            label4.TabIndex = 34;
+            label4.Text = "Κατηγορία";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label3.Location = new Point(25, 127);
+            label3.Name = "label3";
+            label3.Size = new Size(186, 20);
+            label3.TabIndex = 33;
+            label3.Text = "Ημερομηνία Κυκλοφορίας";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            label2.Location = new Point(197, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(218, 30);
+            label2.TabIndex = 32;
+            label2.Text = "Επεξεργασία Ταινίας";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            label1.Location = new Point(25, 53);
+            label1.Name = "label1";
+            label1.Size = new Size(51, 20);
+            label1.TabIndex = 31;
+            label1.Text = "Τίτλος";
+            // 
+            // txtTitle
+            // 
+            txtTitle.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtTitle.Location = new Point(25, 77);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(380, 29);
+            txtTitle.TabIndex = 30;
+            // 
+            // btnEditSave
+            // 
+            btnEditSave.AccessibleRole = AccessibleRole.MenuBar;
+            btnEditSave.BackColor = Color.White;
+            btnEditSave.Cursor = Cursors.Hand;
+            btnEditSave.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            btnEditSave.Location = new Point(25, 381);
+            btnEditSave.Name = "btnEditSave";
+            btnEditSave.Size = new Size(617, 36);
+            btnEditSave.TabIndex = 48;
+            btnEditSave.Text = "Αποθήκευση";
+            btnEditSave.UseVisualStyleBackColor = false;
+            // 
+            // btnEditCancel
+            // 
+            btnEditCancel.AccessibleRole = AccessibleRole.MenuBar;
+            btnEditCancel.BackColor = Color.White;
+            btnEditCancel.Cursor = Cursors.Hand;
+            btnEditCancel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            btnEditCancel.Location = new Point(25, 423);
+            btnEditCancel.Name = "btnEditCancel";
+            btnEditCancel.Size = new Size(617, 36);
+            btnEditCancel.TabIndex = 49;
+            btnEditCancel.Text = "Άκυρο";
+            btnEditCancel.UseVisualStyleBackColor = false;
+            // 
+            // MovieEditForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightGray;
+            ClientSize = new Size(664, 470);
+            Controls.Add(btnEditCancel);
+            Controls.Add(btnEditSave);
+            Controls.Add(btnEditSelectImage);
+            Controls.Add(dtpWatchedDate);
+            Controls.Add(dtpPublishDate);
+            Controls.Add(label5);
+            Controls.Add(gbWatched);
+            Controls.Add(pictureBox);
+            Controls.Add(cmbMedia);
+            Controls.Add(cmbCategory);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(txtRating);
+            Controls.Add(label7);
+            Controls.Add(txtActors);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(txtTitle);
+            Name = "MovieEditForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Επεξεργασία Ταινίας";
+            gbWatched.ResumeLayout(false);
+            gbWatched.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Button btnEditSelectImage;
+        private DateTimePicker dtpWatchedDate;
+        private DateTimePicker dtpPublishDate;
+        private Label label5;
+        private GroupBox gbWatched;
+        private RadioButton rdBtnNo;
+        private RadioButton rdBtnYes;
+        private PictureBox pictureBox;
+        private ComboBox cmbMedia;
+        private ComboBox cmbCategory;
+        private Label label9;
+        private Label label8;
+        private TextBox txtRating;
+        private Label label7;
+        private TextBox txtActors;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private TextBox txtTitle;
+        private Button btnEditSave;
+        private Button btnEditCancel;
+    }
+}
