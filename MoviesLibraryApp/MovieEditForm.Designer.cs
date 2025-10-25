@@ -52,6 +52,7 @@
             btnEditCancel = new Button();
             cmbSelectMovie = new ComboBox();
             label6 = new Label();
+            btnSelectMovie = new Button();
             gbWatched.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxEdit).BeginInit();
             SuspendLayout();
@@ -278,7 +279,7 @@
             cmbSelectMovie.FormattingEnabled = true;
             cmbSelectMovie.Location = new Point(22, 67);
             cmbSelectMovie.Name = "cmbSelectMovie";
-            cmbSelectMovie.Size = new Size(377, 28);
+            cmbSelectMovie.Size = new Size(284, 28);
             cmbSelectMovie.TabIndex = 50;
             // 
             // label6
@@ -291,6 +292,17 @@
             label6.TabIndex = 51;
             label6.Text = "Επίλεξε Ταινία";
             // 
+            // btnSelectMovie
+            // 
+            btnSelectMovie.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 161);
+            btnSelectMovie.Location = new Point(312, 67);
+            btnSelectMovie.Name = "btnSelectMovie";
+            btnSelectMovie.Size = new Size(90, 28);
+            btnSelectMovie.TabIndex = 52;
+            btnSelectMovie.Text = "Επιλογή";
+            btnSelectMovie.UseVisualStyleBackColor = true;
+            btnSelectMovie.Click += btnSelectMovie_Click;
+            // 
             // MovieEditForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -298,6 +310,7 @@
             BackColor = Color.LightGray;
             ClientSize = new Size(664, 518);
             ControlBox = false;
+            Controls.Add(btnSelectMovie);
             Controls.Add(label6);
             Controls.Add(cmbSelectMovie);
             Controls.Add(btnEditCancel);
@@ -358,5 +371,6 @@
         private Button btnEditCancel;
         private ComboBox cmbSelectMovie;
         private Label label6;
+        private Button btnSelectMovie;
     }
 }

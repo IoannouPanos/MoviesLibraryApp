@@ -10,7 +10,7 @@ namespace MoviesLibraryApp
 {
     public partial class MovieEditForm : Form
     {
-         dbContext db = new dbContext();
+        dbContext db = new dbContext();
 
         public MovieEditForm()
         {
@@ -19,7 +19,7 @@ namespace MoviesLibraryApp
 
         private void MovieEditForm_Load(object sender, EventArgs e)
         {
-              LoadMovies(); 
+            LoadMovies();
         }
         private void LoadMovies()
         {
@@ -30,6 +30,11 @@ namespace MoviesLibraryApp
             cmbSelectMovie.DisplayMember = "Title";
             cmbSelectMovie.ValueMember = "Id";
             cmbSelectMovie.SelectedIndex = -1; // κανένα default
+        }
+
+        private void btnSelectMovie_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

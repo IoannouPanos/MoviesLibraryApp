@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dgvAddMovie = new DataGridView();
             txtTitle = new TextBox();
             label1 = new Label();
@@ -61,14 +61,14 @@
             dgvAddMovie.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvAddMovie.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvAddMovie.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvAddMovie.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAddMovie.DefaultCellStyle = dataGridViewCellStyle1;
             dgvAddMovie.Dock = DockStyle.Bottom;
             dgvAddMovie.Location = new Point(0, 471);
             dgvAddMovie.Name = "dgvAddMovie";
@@ -81,14 +81,14 @@
             txtTitle.Location = new Point(38, 78);
             txtTitle.Name = "txtTitle";
             txtTitle.PlaceholderText = "Εισάγετε τον τίτλο";
-            txtTitle.Size = new Size(380, 29);
+            txtTitle.Size = new Size(377, 29);
             txtTitle.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            label1.Location = new Point(38, 54);
+            label1.Location = new Point(38, 55);
             label1.Name = "label1";
             label1.Size = new Size(51, 20);
             label1.TabIndex = 2;

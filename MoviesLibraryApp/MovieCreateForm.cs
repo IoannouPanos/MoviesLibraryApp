@@ -141,15 +141,6 @@ namespace MoviesLibraryApp
                     .Where(m => m.Id == newMovie.Id)
                     .Select(m => new
                     {
-                        //m.Title,
-                        //PublishDate = m.PublishDate.Value.ToShortDateString(),
-                        //Category = m.Category.Name,
-                        //Media = m.Media.Media,
-                        //Actors = string.Join(", ", m.MovieActors.Select(ma => ma.Actor.Name).ToList()),
-                        //Watched = m.Watched == "Ναι" ? "Ναι" : "Όχι",
-                        //WatchedDate = m.WatchedDate.HasValue ? m.WatchedDate.Value.ToShortDateString() : "",
-                        //m.Rating
-
                         Τίτλος = m.Title,
                         Ημερομηνία_Κυκλοφορίας = m.PublishDate.HasValue ? m.PublishDate.Value.ToString("dd/MM/yyyy") : "",
                         Κατηγορία = m.Category != null ? m.Category.Name : "",
