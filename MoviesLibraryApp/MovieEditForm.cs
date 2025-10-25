@@ -78,7 +78,7 @@ namespace MoviesLibraryApp
                 MessageBox.Show("Δεν βρέθηκε η επιλεγμένη ταινία στη βάση δεδομένων.", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-                        
+            // --- ΓΕΜΙΖΩ ΤΑ ΠΕΔΙΑ TEXT ---            
             txtEditTitle.Text = movie.Title ?? "";
 
             txtEditActors.Text = string.Join(", ",
@@ -88,7 +88,7 @@ namespace MoviesLibraryApp
 
             txtEditRating.Text = movie.Rating.HasValue ? movie.Rating.Value.ToString("0.0") : "";
 
-            // Picture -> use ImageLocation; clear if file missing
+            // ---- ΕΙΚΟΝΑ ----
             if (!string.IsNullOrEmpty(movie.Picture) && File.Exists(movie.Picture))
             {
                 pictureBoxEdit.ImageLocation = movie.Picture;
@@ -99,7 +99,8 @@ namespace MoviesLibraryApp
                 pictureBoxEdit.ImageLocation = null;
             }
 
-            // Select category/media by Id (if present)
+            // --- ΕΠΙΛΟΓΗ CATERGORY ΚΑΙ MEDIA ----
+
             if (movie.CategoryId.HasValue)
                 cmbEditCategory.SelectedValue = movie.CategoryId.Value;
             else
@@ -109,6 +110,7 @@ namespace MoviesLibraryApp
                 cmbEditMedia.SelectedValue = movie.MediaId.Value;
             else
                 cmbEditMedia.SelectedIndex = -1;
+
 
             // Publish date (nullable)
             if (movie.PublishDate.HasValue)
