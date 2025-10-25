@@ -65,7 +65,6 @@ namespace MoviesLibraryApp
             }
 
             int selectedMovieId = (int)cmbSelectMovie.SelectedValue;
-
             
             var movie = db.Movies
                 .Include(m => m.Category)
