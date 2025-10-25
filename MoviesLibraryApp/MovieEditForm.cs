@@ -206,6 +206,7 @@ namespace MoviesLibraryApp
             {
                 db.SaveChanges();
                 MessageBox.Show("Οι αλλαγές αποθηκεύτηκαν επιτυχώς!", "Επιτυχία", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearForm();
             }
             catch (Exception ex)
             {
@@ -214,9 +215,36 @@ namespace MoviesLibraryApp
 
         }
 
+        private void ClearForm()
+        {
+            // Καθαρίζουμε το id της επιλεγμένης ταινίας
+            selectedMovieId = null;
+
+            // --- Καθαρισμός TextBoxes ---
+            txtEditTitle.Clear();
+            txtEditActors.Clear();
+            txtEditRating.Clear();
+
+            // --- Καθαρισμός ComboBoxes ---
+            cmbEditCategory.SelectedIndex = -1;
+            cmbEditMedia.SelectedIndex = -1;
+            cmbSelectMovie.SelectedIndex = -1;
+
+            // --- Καθαρισμός Εικόνας ---
+            pictureBoxEdit.Image = null;
+            pictureBoxEdit.ImageLocation = null;
+
+            // --- Ενημέρωση χρήστη ---
+            MessageBox.Show("Η φόρμα καθαρίστηκε. Μπορείτε να επιλέξετε νέα ταινία.",
+                            "Επαναφορά", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void btnEditCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            ClearForm();
+           
         }
+
+
+        
     }
 }
