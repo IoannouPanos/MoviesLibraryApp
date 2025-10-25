@@ -83,12 +83,6 @@ namespace MoviesLibraryApp
 
             LoadMovies();
         }
-
-        private void dgvDelMovie_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnFindMovie_Click(object sender, EventArgs e)
         {
             if (cmbMovies.SelectedIndex == -1)

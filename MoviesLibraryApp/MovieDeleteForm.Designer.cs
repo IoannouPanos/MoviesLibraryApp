@@ -65,7 +65,6 @@
             dgvDelMovie.Name = "dgvDelMovie";
             dgvDelMovie.Size = new Size(358, 249);
             dgvDelMovie.TabIndex = 2;
-            dgvDelMovie.CellClick += dgvDelMovie_CellClick;
             // 
             // BtnDelMovie
             // 
