@@ -66,10 +66,10 @@ namespace MoviesLibraryApp
 
         private void mnbtnFindMovies_Click(object sender, EventArgs e)
         {
-            //foreach (Form child in this.MdiChildren)
-            //{
-            //    child.Close();
-            //}
+            foreach (Form child in this.MdiChildren)
+            {
+                child.Close();
+            }
             MovieSearchForm frm = new MovieSearchForm();
             frm.MdiParent = this;
             frm.Show();

@@ -42,7 +42,6 @@
             btnClear = new Button();
             btnSearch = new Button();
             label4 = new Label();
-            btnEditMovie = new Button();
             dgvSearchResult = new DataGridView();
             groupBox1.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -180,17 +179,6 @@
             label4.TabIndex = 23;
             label4.Text = "Εύρεση Ταινίας";
             // 
-            // btnEditMovie
-            // 
-            btnEditMovie.Anchor = AnchorStyles.None;
-            btnEditMovie.Cursor = Cursors.Hand;
-            btnEditMovie.Location = new Point(272, 262);
-            btnEditMovie.Name = "btnEditMovie";
-            btnEditMovie.Size = new Size(138, 45);
-            btnEditMovie.TabIndex = 24;
-            btnEditMovie.Text = "Επεξεργασία Ταινίας";
-            btnEditMovie.UseVisualStyleBackColor = true;
-            // 
             // dgvSearchResult
             // 
             dgvSearchResult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -209,7 +197,6 @@
             dgvSearchResult.Name = "dgvSearchResult";
             dgvSearchResult.Size = new Size(666, 188);
             dgvSearchResult.TabIndex = 25;
-
             // 
             // MovieSearchForm
             // 
@@ -218,7 +205,6 @@
             ClientSize = new Size(666, 558);
             ControlBox = false;
             Controls.Add(dgvSearchResult);
-            Controls.Add(btnEditMovie);
             Controls.Add(label4);
             Controls.Add(btnRandom);
             Controls.Add(btnClear);
@@ -257,7 +243,6 @@
         private Button btnSearch;
         private Label label4;
         private ComboBox cmbRating;
-        private Button btnEditMovie;
         private DataGridView dgvSearchResult;
     }
 }
