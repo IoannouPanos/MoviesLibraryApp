@@ -10,7 +10,7 @@ namespace MoviesLibraryApp
     public partial class MovieEditForm : Form
     {
         dbContext db = new dbContext();
-
+        private int? selectedMovieId = null;
         public MovieEditForm()
         {
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace MoviesLibraryApp
             }
 
             int selectedMovieId = (int)cmbSelectMovie.SelectedValue;
-            
+
             var movie = db.Movies
                 .Include(m => m.Category)
                 .Include(m => m.Media)
@@ -112,7 +112,7 @@ namespace MoviesLibraryApp
                 cmbEditMedia.SelectedIndex = -1;
 
 
-            // Publish date (nullable)
+            // ---- Ημερομηνία κυκλοφορίας (nullable)----
             if (movie.PublishDate.HasValue)
             {
                 dtpEditPublishDate.Value = movie.PublishDate.Value;
@@ -124,7 +124,7 @@ namespace MoviesLibraryApp
                 try { dtpEditPublishDate.Checked = false; } catch { }
             }
 
-            // Watched date (nullable)
+            // ---- Έχω δει και Ημερομηνία προβολής (nullable) ----
             if (movie.WatchedDate.HasValue)
             {
                 dtpEditWatchedDate.Value = movie.WatchedDate.Value;
@@ -134,6 +134,89 @@ namespace MoviesLibraryApp
             {
                 try { dtpEditWatchedDate.Checked = false; } catch { }
             }
+
+            this.selectedMovieId = selectedMovieId;
+        }
+
+        private void btnEditSave_Click(object sender, EventArgs e)
+        {
+            if (selectedMovieId == null)
+            {
+                MessageBox.Show("Δεν έχει επιλεγεί καμία ταινία.");
+                return;
+            }
+
+            var movie = db.Movies
+                .Include(m => m.MovieActors)
+                .FirstOrDefault(m => m.Id == selectedMovieId.Value);
+
+            if (movie == null)
+            {
+                MessageBox.Show("Η ταινία δεν βρέθηκε στη βάση δεδομένων.", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // === Ενημέρωση βασικών πεδίων ===
+            movie.Title = txtEditTitle.Text.Trim();
+            movie.Rating = (double?)(decimal.TryParse(txtEditRating.Text, out var rating) ? rating : (decimal?)null);
+
+            movie.CategoryId = cmbEditCategory.SelectedValue as int?;
+            movie.MediaId = cmbEditMedia.SelectedValue as int?;
+
+            movie.PublishDate = dtpEditPublishDate.Checked ? dtpEditPublishDate.Value : (DateTime?)null;
+            movie.WatchedDate = dtpEditWatchedDate.Checked ? dtpEditWatchedDate.Value : (DateTime?)null;
+
+            // === Εικόνα ===
+            if (!string.IsNullOrEmpty(pictureBoxEdit.ImageLocation))
+                movie.Picture = pictureBoxEdit.ImageLocation;
+
+            // === Ηθοποιοί ===
+            // Aντικαθιστούμε όλους τους παλιούς ηθοποιούς
+            // Αν το txtEditActors περιέχει ονόματα χωρισμένα με κόμμα
+            if (!string.IsNullOrWhiteSpace(txtEditActors.Text))
+            {
+                var actorNames = txtEditActors.Text.Split(',')
+                                                   .Select(a => a.Trim())
+                                                   .Where(a => !string.IsNullOrWhiteSpace(a))
+                                                   .ToList();
+
+                // Διαγραφή παλιών σχέσεων
+                db.MovieActors.RemoveRange(movie.MovieActors);
+
+                // Εύρεση ή δημιουργία νέων ηθοποιών
+                foreach (var name in actorNames)
+                {
+                    var actor = db.Actors.FirstOrDefault(a => a.Name == name);
+                    if (actor == null)
+                    {
+                        actor = new Actor { Name = name };
+                        db.Actors.Add(actor);
+                    }
+
+                    movie.MovieActors.Add(new MovieActor
+                    {
+                        Actor = actor,
+                        Movie = movie
+                    });
+                }
+            }
+
+            // === Αποθήκευση στη βάση ===
+            try
+            {
+                db.SaveChanges();
+                MessageBox.Show("Οι αλλαγές αποθηκεύτηκαν επιτυχώς!", "Επιτυχία", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Παρουσιάστηκε σφάλμα κατά την αποθήκευση:\n{ex.Message}", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnEditCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

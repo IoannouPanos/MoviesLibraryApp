@@ -259,6 +259,7 @@
             btnEditSave.TabIndex = 48;
             btnEditSave.Text = "Αποθήκευση";
             btnEditSave.UseVisualStyleBackColor = false;
+            btnEditSave.Click += btnEditSave_Click;
             // 
             // btnEditCancel
             // 
@@ -272,6 +273,7 @@
             btnEditCancel.TabIndex = 49;
             btnEditCancel.Text = "Άκυρο";
             btnEditCancel.UseVisualStyleBackColor = false;
+            btnEditCancel.Click += btnEditCancel_Click;
             // 
             // cmbSelectMovie
             // 
