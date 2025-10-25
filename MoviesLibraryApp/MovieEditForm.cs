@@ -66,7 +66,7 @@ namespace MoviesLibraryApp
 
             int selectedMovieId = (int)cmbSelectMovie.SelectedValue;
 
-            // Get a single Movie entity (not IQueryable) and include related data
+            
             var movie = db.Movies
                 .Include(m => m.Category)
                 .Include(m => m.Media)
@@ -79,8 +79,7 @@ namespace MoviesLibraryApp
                 MessageBox.Show("Δεν βρέθηκε η επιλεγμένη ταινία στη βάση δεδομένων.", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            // Fill controls with null-safety
+                        
             txtEditTitle.Text = movie.Title ?? "";
 
             txtEditActors.Text = string.Join(", ",
