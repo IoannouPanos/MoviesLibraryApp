@@ -33,22 +33,24 @@
             txtViewTitle = new TextBox();
             txtViewCategory = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txtViewMedia = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txtViewRating = new TextBox();
             label4 = new Label();
-            textBox5 = new TextBox();
+            txtViewPubDate = new TextBox();
             label5 = new Label();
-            textBox6 = new TextBox();
+            txtViewWatcDate = new TextBox();
             label6 = new Label();
             label8 = new Label();
+            txtViewActors = new TextBox();
+            label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)pbMovieView).BeginInit();
             SuspendLayout();
             // 
             // pbMovieView
             // 
             pbMovieView.BorderStyle = BorderStyle.Fixed3D;
-            pbMovieView.Location = new Point(29, 91);
+            pbMovieView.Location = new Point(27, 91);
             pbMovieView.Margin = new Padding(4);
             pbMovieView.Name = "pbMovieView";
             pbMovieView.Size = new Size(388, 485);
@@ -75,7 +77,7 @@
             // 
             // txtViewCategory
             // 
-            txtViewCategory.Location = new Point(476, 213);
+            txtViewCategory.Location = new Point(476, 277);
             txtViewCategory.Margin = new Padding(4);
             txtViewCategory.Name = "txtViewCategory";
             txtViewCategory.Size = new Size(277, 29);
@@ -85,74 +87,74 @@
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(476, 188);
+            label2.Location = new Point(476, 252);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
             label2.Size = new Size(86, 21);
             label2.TabIndex = 3;
             label2.Text = "Κατηγορία";
             // 
-            // textBox3
+            // txtViewMedia
             // 
-            textBox3.Location = new Point(476, 298);
-            textBox3.Margin = new Padding(4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(277, 29);
-            textBox3.TabIndex = 6;
+            txtViewMedia.Location = new Point(476, 347);
+            txtViewMedia.Margin = new Padding(4);
+            txtViewMedia.Name = "txtViewMedia";
+            txtViewMedia.Size = new Size(277, 29);
+            txtViewMedia.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(476, 273);
+            label3.Location = new Point(476, 322);
             label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
             label3.Size = new Size(124, 21);
             label3.TabIndex = 5;
             label3.Text = "Μέσο Προβολής";
             // 
-            // textBox4
+            // txtViewRating
             // 
-            textBox4.Location = new Point(476, 379);
-            textBox4.Margin = new Padding(4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(277, 29);
-            textBox4.TabIndex = 8;
+            txtViewRating.Location = new Point(476, 417);
+            txtViewRating.Margin = new Padding(4);
+            txtViewRating.Name = "txtViewRating";
+            txtViewRating.Size = new Size(277, 29);
+            txtViewRating.TabIndex = 8;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(476, 354);
+            label4.Location = new Point(476, 392);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(95, 21);
             label4.TabIndex = 7;
             label4.Text = "Βαθμολογία";
             // 
-            // textBox5
+            // txtViewPubDate
             // 
-            textBox5.Location = new Point(476, 461);
-            textBox5.Margin = new Padding(4);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(277, 29);
-            textBox5.TabIndex = 10;
+            txtViewPubDate.Location = new Point(476, 481);
+            txtViewPubDate.Margin = new Padding(4);
+            txtViewPubDate.Name = "txtViewPubDate";
+            txtViewPubDate.Size = new Size(277, 29);
+            txtViewPubDate.TabIndex = 10;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(476, 435);
+            label5.Location = new Point(476, 455);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(192, 21);
             label5.TabIndex = 9;
             label5.Text = "Ημερομηνία Κυκλοφορίας";
             // 
-            // textBox6
+            // txtViewWatcDate
             // 
-            textBox6.Location = new Point(476, 547);
-            textBox6.Margin = new Padding(4);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(277, 29);
-            textBox6.TabIndex = 12;
+            txtViewWatcDate.Location = new Point(476, 547);
+            txtViewWatcDate.Margin = new Padding(4);
+            txtViewWatcDate.Name = "txtViewWatcDate";
+            txtViewWatcDate.Size = new Size(277, 29);
+            txtViewWatcDate.TabIndex = 12;
             // 
             // label6
             // 
@@ -175,19 +177,40 @@
             label8.TabIndex = 15;
             label8.Text = "Ταινία";
             // 
+            // txtViewActors
+            // 
+            txtViewActors.Location = new Point(476, 180);
+            txtViewActors.Margin = new Padding(4);
+            txtViewActors.Multiline = true;
+            txtViewActors.Name = "txtViewActors";
+            txtViewActors.Size = new Size(277, 68);
+            txtViewActors.TabIndex = 17;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(476, 155);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(75, 21);
+            label7.TabIndex = 16;
+            label7.Text = "Ηθοποιοί";
+            // 
             // MovieView
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(787, 610);
+            Controls.Add(txtViewActors);
+            Controls.Add(label7);
             Controls.Add(label8);
-            Controls.Add(textBox6);
+            Controls.Add(txtViewWatcDate);
             Controls.Add(label6);
-            Controls.Add(textBox5);
+            Controls.Add(txtViewPubDate);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(txtViewRating);
             Controls.Add(label4);
-            Controls.Add(textBox3);
+            Controls.Add(txtViewMedia);
             Controls.Add(label3);
             Controls.Add(txtViewCategory);
             Controls.Add(label2);
@@ -212,14 +235,16 @@
         private TextBox txtViewTitle;
         private TextBox txtViewCategory;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txtViewMedia;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox txtViewRating;
         private Label label4;
-        private TextBox textBox5;
+        private TextBox txtViewPubDate;
         private Label label5;
-        private TextBox textBox6;
+        private TextBox txtViewWatcDate;
         private Label label6;
         private Label label8;
+        private TextBox txtViewActors;
+        private Label label7;
     }
 }
