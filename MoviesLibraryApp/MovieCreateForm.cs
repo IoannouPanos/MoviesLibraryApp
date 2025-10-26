@@ -195,7 +195,8 @@ namespace MoviesLibraryApp
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 selectedImagePath = ofd.FileName;
-                pictureBox.Image = Image.FromFile(selectedImagePath);
+                pictureBox.ImageLocation = selectedImagePath;
+                pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
     
