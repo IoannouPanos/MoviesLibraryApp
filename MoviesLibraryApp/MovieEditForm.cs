@@ -91,14 +91,19 @@ namespace MoviesLibraryApp
             txtEditRating.Text = movie.Rating.HasValue ? movie.Rating.Value.ToString("0.0") : "";
 
             // ---- ΕΙΚΟΝΑ ----
-            if (!string.IsNullOrEmpty(movie.Picture) && File.Exists(movie.Picture))
+            if (!string.IsNullOrEmpty(movie.Picture))
             {
-                pictureBoxEdit.ImageLocation = movie.Picture;
+                // Συνθέτουμε το πλήρες path με βάση το Application.StartupPath
+                var imagePath = Path.Combine(Application.StartupPath, movie.Picture);
+
+                if (File.Exists(imagePath))
+                    pictureBoxEdit.ImageLocation = imagePath;
+                else
+                    pictureBoxEdit.Image = null;
             }
             else
             {
                 pictureBoxEdit.Image = null;
-                pictureBoxEdit.ImageLocation = null;
             }
 
             // --- ΕΠΙΛΟΓΗ CATERGORY ΚΑΙ MEDIA ----
@@ -168,11 +173,21 @@ namespace MoviesLibraryApp
             movie.PublishDate = dtpEditPublishDate.Checked ? dtpEditPublishDate.Value : (DateTime?)null;
             movie.WatchedDate = dtpEditWatchedDate.Checked ? dtpEditWatchedDate.Value : (DateTime?)null;
 
-            /// === Εικόνα ===
-            // Αν έχει επιλεγεί νέα εικόνα, ενημέρωσε το path της
+            // === Εικόνα ===
             if (!string.IsNullOrEmpty(selectedImagePath))
             {
-                movie.Picture = selectedImagePath;
+                // Δημιουργούμε το σχετικό path (π.χ. "Images\matrix.jpg")
+                var relativePath = Path.Combine("Images", Path.GetFileName(selectedImagePath));
+                var destinationPath = Path.Combine(Application.StartupPath, relativePath);
+
+                // Αν δεν υπάρχει ο φάκελος "Images", τον δημιουργούμε
+                Directory.CreateDirectory(Path.GetDirectoryName(destinationPath)!);
+
+                // Αντιγράφουμε το αρχείο στο φάκελο του project (αντικατάσταση αν υπάρχει)
+                File.Copy(selectedImagePath, destinationPath, true);
+
+                // Αποθηκεύουμε στη βάση ΜΟΝΟ το σχετικό path
+                movie.Picture = relativePath;
             }
             else if (!string.IsNullOrEmpty(pictureBoxEdit.ImageLocation))
             {
