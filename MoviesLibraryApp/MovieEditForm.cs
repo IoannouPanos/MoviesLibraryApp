@@ -11,6 +11,8 @@ namespace MoviesLibraryApp
     {
         dbContext db = new dbContext();
         private int? selectedMovieId = null;
+        private string selectedImagePath;
+
         public MovieEditForm()
         {
             InitializeComponent();
@@ -166,9 +168,20 @@ namespace MoviesLibraryApp
             movie.PublishDate = dtpEditPublishDate.Checked ? dtpEditPublishDate.Value : (DateTime?)null;
             movie.WatchedDate = dtpEditWatchedDate.Checked ? dtpEditWatchedDate.Value : (DateTime?)null;
 
-            // === Εικόνα ===
-            if (!string.IsNullOrEmpty(pictureBoxEdit.ImageLocation))
+            /// === Εικόνα ===
+            // Αν έχει επιλεγεί νέα εικόνα, ενημέρωσε το path της
+            if (!string.IsNullOrEmpty(selectedImagePath))
+            {
+                movie.Picture = selectedImagePath;
+            }
+            else if (!string.IsNullOrEmpty(pictureBoxEdit.ImageLocation))
+            {
                 movie.Picture = pictureBoxEdit.ImageLocation;
+            }
+            else
+            {
+                movie.Picture = null;
+            }
 
             // === Ηθοποιοί ===
             // Aντικαθιστούμε όλους τους παλιούς ηθοποιούς
@@ -214,7 +227,6 @@ namespace MoviesLibraryApp
             }
 
         }
-
         private void ClearForm()
         {
             // Καθαρίζουμε το id της επιλεγμένης ταινίας
@@ -241,10 +253,20 @@ namespace MoviesLibraryApp
         private void btnEditCancel_Click(object sender, EventArgs e)
         {
             ClearForm();
-           
+
         }
 
+        private void btnEditSelectImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Εικόνες|*.jpg;*.jpeg;*.png;*.bmp";
 
-        
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                selectedImagePath = ofd.FileName;
+                pictureBoxEdit.ImageLocation = selectedImagePath;
+            }
+          
+        }
     }
 }

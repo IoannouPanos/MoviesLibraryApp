@@ -50,119 +50,113 @@
             // pbMovieView
             // 
             pbMovieView.BorderStyle = BorderStyle.Fixed3D;
-            pbMovieView.Location = new Point(27, 91);
-            pbMovieView.Margin = new Padding(4);
+            pbMovieView.Location = new Point(12, 62);
             pbMovieView.Name = "pbMovieView";
-            pbMovieView.Size = new Size(388, 485);
+            pbMovieView.Size = new Size(243, 285);
+            pbMovieView.SizeMode = PictureBoxSizeMode.Zoom;
             pbMovieView.TabIndex = 0;
             pbMovieView.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(476, 91);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(268, 62);
             label1.Name = "label1";
-            label1.Size = new Size(54, 21);
+            label1.Size = new Size(44, 17);
             label1.TabIndex = 1;
             label1.Text = "Τίτλος";
             // 
             // txtViewTitle
             // 
-            txtViewTitle.Location = new Point(476, 116);
-            txtViewTitle.Margin = new Padding(4);
+            txtViewTitle.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtViewTitle.Location = new Point(268, 82);
             txtViewTitle.Name = "txtViewTitle";
-            txtViewTitle.Size = new Size(277, 29);
+            txtViewTitle.Size = new Size(297, 25);
             txtViewTitle.TabIndex = 2;
             // 
             // txtViewCategory
             // 
-            txtViewCategory.Location = new Point(476, 277);
-            txtViewCategory.Margin = new Padding(4);
+            txtViewCategory.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtViewCategory.Location = new Point(462, 198);
             txtViewCategory.Name = "txtViewCategory";
-            txtViewCategory.Size = new Size(277, 29);
+            txtViewCategory.Size = new Size(104, 25);
             txtViewCategory.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(476, 252);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(268, 201);
             label2.Name = "label2";
-            label2.Size = new Size(86, 21);
+            label2.Size = new Size(71, 17);
             label2.TabIndex = 3;
             label2.Text = "Κατηγορία";
             // 
             // txtViewMedia
             // 
-            txtViewMedia.Location = new Point(476, 347);
-            txtViewMedia.Margin = new Padding(4);
+            txtViewMedia.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtViewMedia.Location = new Point(463, 229);
             txtViewMedia.Name = "txtViewMedia";
-            txtViewMedia.Size = new Size(277, 29);
+            txtViewMedia.Size = new Size(103, 25);
             txtViewMedia.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(476, 322);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(268, 232);
             label3.Name = "label3";
-            label3.Size = new Size(124, 21);
+            label3.Size = new Size(104, 17);
             label3.TabIndex = 5;
             label3.Text = "Μέσο Προβολής";
             // 
             // txtViewRating
             // 
-            txtViewRating.Location = new Point(476, 417);
-            txtViewRating.Margin = new Padding(4);
+            txtViewRating.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtViewRating.Location = new Point(462, 260);
             txtViewRating.Name = "txtViewRating";
-            txtViewRating.Size = new Size(277, 29);
+            txtViewRating.Size = new Size(103, 25);
             txtViewRating.TabIndex = 8;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(476, 392);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(268, 263);
             label4.Name = "label4";
-            label4.Size = new Size(95, 21);
+            label4.Size = new Size(78, 17);
             label4.TabIndex = 7;
             label4.Text = "Βαθμολογία";
             // 
             // txtViewPubDate
             // 
-            txtViewPubDate.Location = new Point(476, 481);
-            txtViewPubDate.Margin = new Padding(4);
+            txtViewPubDate.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtViewPubDate.Location = new Point(462, 291);
             txtViewPubDate.Name = "txtViewPubDate";
-            txtViewPubDate.Size = new Size(277, 29);
+            txtViewPubDate.Size = new Size(102, 25);
             txtViewPubDate.TabIndex = 10;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(476, 455);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(268, 294);
             label5.Name = "label5";
-            label5.Size = new Size(192, 21);
+            label5.Size = new Size(160, 17);
             label5.TabIndex = 9;
             label5.Text = "Ημερομηνία Κυκλοφορίας";
             // 
             // txtViewWatcDate
             // 
-            txtViewWatcDate.Location = new Point(476, 547);
-            txtViewWatcDate.Margin = new Padding(4);
+            txtViewWatcDate.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtViewWatcDate.Location = new Point(461, 322);
             txtViewWatcDate.Name = "txtViewWatcDate";
-            txtViewWatcDate.Size = new Size(277, 29);
+            txtViewWatcDate.Size = new Size(103, 25);
             txtViewWatcDate.TabIndex = 12;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(476, 522);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(268, 325);
             label6.Name = "label6";
-            label6.Size = new Size(170, 21);
+            label6.Size = new Size(141, 17);
             label6.TabIndex = 11;
             label6.Text = "Ημερομηνία Προβολής";
             // 
@@ -170,8 +164,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 161);
-            label8.Location = new Point(360, 13);
-            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Location = new Point(263, 9);
             label8.Name = "label8";
             label8.Size = new Size(68, 25);
             label8.TabIndex = 15;
@@ -179,28 +172,27 @@
             // 
             // txtViewActors
             // 
-            txtViewActors.Location = new Point(476, 180);
-            txtViewActors.Margin = new Padding(4);
+            txtViewActors.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            txtViewActors.Location = new Point(268, 134);
             txtViewActors.Multiline = true;
             txtViewActors.Name = "txtViewActors";
-            txtViewActors.Size = new Size(277, 68);
+            txtViewActors.Size = new Size(297, 58);
             txtViewActors.TabIndex = 17;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(476, 155);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(268, 114);
             label7.Name = "label7";
-            label7.Size = new Size(75, 21);
+            label7.Size = new Size(63, 17);
             label7.TabIndex = 16;
             label7.Text = "Ηθοποιοί";
             // 
             // MovieView
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(787, 610);
+            ClientSize = new Size(582, 374);
             Controls.Add(txtViewActors);
             Controls.Add(label7);
             Controls.Add(label8);
@@ -217,12 +209,10 @@
             Controls.Add(txtViewTitle);
             Controls.Add(label1);
             Controls.Add(pbMovieView);
-            Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 161);
-            Margin = new Padding(4);
+            Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 161);
             Name = "MovieView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ταινία";
-            Load += MovieView_Load;
             ((System.ComponentModel.ISupportInitialize)pbMovieView).EndInit();
             ResumeLayout(false);
             PerformLayout();

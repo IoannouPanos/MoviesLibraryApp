@@ -84,11 +84,8 @@ namespace MoviesLibraryApp
             }
         }
 
-        // Βοηθητική: συλλέγει όλα τα controls αναδρομικά
-        
+ 
 
-        private void MovieView_Load(object sender, EventArgs e)
-        {
-        }
+
     }
 }

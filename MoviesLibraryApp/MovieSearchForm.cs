@@ -182,6 +182,7 @@ namespace MoviesLibraryApp
                 // 4️. Δημιουργία του τελικού ανώνυμου αντικειμένου για το DataGridView
                 var result = new
                 {
+                    Id = randomMovie.Id,
                     Τίτλος = randomMovie.Title,
                     Ημερομηνία_Κυκλοφορίας = randomMovie.PublishDate.HasValue ? randomMovie.PublishDate.Value.ToString("dd/MM/yyyy") : "",
                     Κατηγορία = randomMovie.Category?.Name ?? "",
@@ -192,6 +193,7 @@ namespace MoviesLibraryApp
                 // 5️. Ανάθεση στο DataGridView
                 var results = new List<object> { result };
                 dgvSearchResult.DataSource = results;
+                dgvSearchResult.Columns["Id"].Visible = false;
             }
             catch (Exception ex)
             {

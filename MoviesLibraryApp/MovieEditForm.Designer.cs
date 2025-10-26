@@ -68,6 +68,7 @@
             btnEditSelectImage.TabIndex = 47;
             btnEditSelectImage.Text = "Επιλογή Εικόνας";
             btnEditSelectImage.UseVisualStyleBackColor = false;
+            btnEditSelectImage.Click += btnEditSelectImage_Click;
             // 
             // dtpEditWatchedDate
             // 
@@ -135,6 +136,7 @@
             pictureBoxEdit.Location = new Point(423, 59);
             pictureBoxEdit.Name = "pictureBoxEdit";
             pictureBoxEdit.Size = new Size(219, 309);
+            pictureBoxEdit.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxEdit.TabIndex = 42;
             pictureBoxEdit.TabStop = false;
             // 
