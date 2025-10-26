@@ -124,6 +124,7 @@ namespace MoviesLibraryApp
                 var results = checkData
                     .Select(m => new
                     {
+                        Id = m.Id,
                         Τίτλος = m.Title,
                         Ημερομηνία_Κυκλοφορίας = m.PublishDate.HasValue ? m.PublishDate.Value.ToString("dd/MM/yyyy") : "",
                         Κατηγορία = m.Category != null ? m.Category.Name : "",
@@ -139,6 +140,7 @@ namespace MoviesLibraryApp
                     .ToList();
 
                 dgvSearchResult.DataSource = results;
+                dgvSearchResult.Columns["Id"].Visible = false; // Απόκρυψη της στήλης Id
             }
         }
 
@@ -200,7 +202,16 @@ namespace MoviesLibraryApp
 
         private void dgvSearchResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            
+            if (e.RowIndex >= 0)
+            {
+                // Παίρνουμε το ID της ταινίας από το DataGridView
+                int movieId = Convert.ToInt32(dgvSearchResult.Rows[e.RowIndex].Cells["Id"].Value);
 
+                // Δημιουργούμε και εμφανίζουμε τη φόρμα προβολής
+                MovieView frm = new MovieView(movieId);
+                frm.ShowDialog();
+            }
         }
     }
 
