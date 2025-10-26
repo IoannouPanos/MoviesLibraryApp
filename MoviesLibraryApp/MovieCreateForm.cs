@@ -77,7 +77,21 @@ namespace MoviesLibraryApp
                 return;
             }
 
+            string relativeImagePath = null;
 
+            if (!string.IsNullOrEmpty(selectedImagePath))
+            {
+                // Δημιουργούμε φάκελο Images μέσα στον φάκελο εκτέλεσης
+                string imagesFolder = Path.Combine(Application.StartupPath, "Images");
+                Directory.CreateDirectory(imagesFolder);
+
+                // Δημιουργούμε το τελικό path και αντιγράφουμε το αρχείο
+                string destFileName = Path.Combine(imagesFolder, Path.GetFileName(selectedImagePath));
+                File.Copy(selectedImagePath, destFileName, true);
+
+                // Αποθηκεύουμε το σχετικό path (για την βάση)
+                relativeImagePath = Path.Combine("Images", Path.GetFileName(selectedImagePath));
+            }
 
             // 1️. Δημιουργία νέας ταινίας
             Movie newMovie = new Movie
@@ -87,7 +101,7 @@ namespace MoviesLibraryApp
                 CategoryId = (int)cmbCategory.SelectedValue,
                 MediaId = (int)cmbMedia.SelectedValue,
                 Rating = rating,
-                Picture = selectedImagePath,
+                Picture = relativeImagePath,
 
             };
             if (rdBtnYes.Checked)
