@@ -198,6 +198,10 @@ namespace MoviesLibraryApp
 
         }
 
+        private void dgvSearchResult_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 
 }
