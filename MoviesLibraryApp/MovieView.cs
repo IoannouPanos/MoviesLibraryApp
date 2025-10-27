@@ -15,7 +15,6 @@ namespace MoviesLibraryApp
         public MovieView(int movieID)
         {
             InitializeComponent();
-            // Διόρθωση: σωστό όνομα μεταβλητής
             LoadMovieDetails(movieID);
             SetControlsReadOnly();
 

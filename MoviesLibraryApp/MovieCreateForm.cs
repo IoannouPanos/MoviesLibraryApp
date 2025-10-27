@@ -120,35 +120,82 @@ namespace MoviesLibraryApp
                 db.SaveChanges();
 
                 // 2️. Αποθήκευση Actors (Πολλά-προς-Πολλά)
+
                 if (!string.IsNullOrWhiteSpace(txtActors.Text))
                 {
-                    string[] actors = txtActors.Text.Split(',');
+                    var actorNames = txtActors.Text
+                        .Split(',')
+                        .Select(a => a.Trim())
+                        .Where(a => !string.IsNullOrWhiteSpace(a))
+                        .ToList();
 
-                    foreach (var actorName in actors)
+                    // Φέρνουμε όσους υπάρχουν ήδη στη βάση (case-insensitive)
+                    var existingActors = db.Actors
+                        .Where(a => actorNames.Contains(a.Name))
+                        .ToList();
+
+                    var newActors = new List<Actor>();
+
+                    foreach (var name in actorNames)
                     {
-                        string cleanName = actorName.Trim();
-                        if (string.IsNullOrEmpty(cleanName)) continue;
-
-                        // Έλεγχος αν υπάρχει ήδη ο ηθοποιός
-                        Actor actor = db.Actors.FirstOrDefault(a => a.Name == cleanName);
+                        var actor = existingActors
+                            .FirstOrDefault(a => string.Equals(a.Name, name, StringComparison.OrdinalIgnoreCase));
 
                         if (actor == null)
                         {
-                            actor = new Actor { Name = cleanName };
-                            db.Actors.Add(actor);
-                            db.SaveChanges();
+                            actor = new Actor { Name = name };
+                            newActors.Add(actor);
                         }
 
-                        // Δημιουργία σύνδεσης στη MovieActors
                         db.MovieActors.Add(new MovieActor
                         {
-                            MovieId = newMovie.Id,
-                            ActorId = actor.Id
+                            Movie = newMovie,
+                            Actor = actor
                         });
                     }
 
+                    // Προσθέτουμε μαζικά μόνο τους νέους ηθοποιούς (όχι SaveChanges σε κάθε loop)
+                    if (newActors.Any())
+                        db.Actors.AddRange(newActors);
+
                     db.SaveChanges();
                 }
+
+
+
+
+
+
+
+                //if (!string.IsNullOrWhiteSpace(txtActors.Text))
+                //{
+                //    string[] actors = txtActors.Text.Split(',');
+
+                //    foreach (var actorName in actors)
+                //    {
+                //        string cleanName = actorName.Trim();
+                //        if (string.IsNullOrEmpty(cleanName)) continue;
+
+                //        // Έλεγχος αν υπάρχει ήδη ο ηθοποιός
+                //        Actor actor = db.Actors.FirstOrDefault(a => a.Name == cleanName);
+
+                //        if (actor == null)
+                //        {
+                //            actor = new Actor { Name = cleanName };
+                //            db.Actors.Add(actor);
+                //            db.SaveChanges();
+                //        }
+
+                //        // Δημιουργία σύνδεσης στη MovieActors
+                //        db.MovieActors.Add(new MovieActor
+                //        {
+                //            MovieId = newMovie.Id,
+                //            ActorId = actor.Id
+                //        });
+                //    }
+
+                //    db.SaveChanges();
+                //}
 
                 // 3️. Προβολή μόνο της νέας ταινίας στο DataGrid
                 dgvAddMovie.DataSource = db.Movies
