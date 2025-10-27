@@ -228,6 +228,7 @@
             rdBtnNo.TabStop = true;
             rdBtnNo.Text = "Όχι";
             rdBtnNo.UseVisualStyleBackColor = true;
+            rdBtnNo.CheckedChanged += rdBtnNo_CheckedChanged;
             // 
             // rdBtnYes
             // 
@@ -239,6 +240,7 @@
             rdBtnYes.TabStop = true;
             rdBtnYes.Text = "Ναι";
             rdBtnYes.UseVisualStyleBackColor = true;
+            rdBtnYes.CheckedChanged += rdBtnYes_CheckedChanged;
             // 
             // label5
             // 
@@ -260,6 +262,7 @@
             // 
             // dtpWatchedDate
             // 
+            dtpWatchedDate.Enabled = false;
             dtpWatchedDate.Format = DateTimePickerFormat.Short;
             dtpWatchedDate.Location = new Point(249, 338);
             dtpWatchedDate.Name = "dtpWatchedDate";

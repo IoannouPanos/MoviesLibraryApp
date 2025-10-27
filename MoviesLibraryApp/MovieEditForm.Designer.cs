@@ -118,6 +118,7 @@
             rdBtnNo.TabStop = true;
             rdBtnNo.Text = "Όχι";
             rdBtnNo.UseVisualStyleBackColor = true;
+
             // 
             // rdBtnYes
             // 

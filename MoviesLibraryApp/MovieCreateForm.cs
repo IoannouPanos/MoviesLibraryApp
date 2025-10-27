@@ -235,7 +235,7 @@ namespace MoviesLibraryApp
         }
         private void btnSelectImage_Click(object sender, EventArgs e)
         {
-                    
+
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Filter = "Εικόνες|*.jpg;*.jpeg;*.png;*.bmp";
 
@@ -246,6 +246,15 @@ namespace MoviesLibraryApp
                 pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             }
         }
-    
+
+        private void rdBtnYes_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpWatchedDate.Enabled = true;
+        }
+
+        private void rdBtnNo_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpWatchedDate.Enabled = false;
+        }
     }
 };

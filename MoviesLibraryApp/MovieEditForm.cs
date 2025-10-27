@@ -281,7 +281,8 @@ namespace MoviesLibraryApp
                 selectedImagePath = ofd.FileName;
                 pictureBoxEdit.ImageLocation = selectedImagePath;
             }
-          
+
         }
+
     }
 }
