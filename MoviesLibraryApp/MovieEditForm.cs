@@ -284,5 +284,14 @@ namespace MoviesLibraryApp
 
         }
 
+        private void rdBtnNo_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpEditWatchedDate.Enabled = false;
+        }
+
+        private void rdBtnYes_CheckedChanged(object sender, EventArgs e)
+        {
+            dtpEditWatchedDate.Enabled = true;
+        }
     }
 }

@@ -100,7 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Salmon;
+            BackColor = Color.Snow;
             ClientSize = new Size(416, 423);
             Controls.Add(label2);
             Controls.Add(btnFindMovie);
@@ -109,7 +109,7 @@
             Controls.Add(label1);
             Controls.Add(cmbMovies);
             Name = "MovieDeleteForm";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Διαγραφή Ταινίας";
             Load += MovieDeleteForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvDelMovie).EndInit();

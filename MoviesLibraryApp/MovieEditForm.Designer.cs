@@ -118,7 +118,7 @@
             rdBtnNo.TabStop = true;
             rdBtnNo.Text = "Όχι";
             rdBtnNo.UseVisualStyleBackColor = true;
-
+            rdBtnNo.CheckedChanged += rdBtnNo_CheckedChanged;
             // 
             // rdBtnYes
             // 
@@ -130,6 +130,7 @@
             rdBtnYes.TabStop = true;
             rdBtnYes.Text = "Ναι";
             rdBtnYes.UseVisualStyleBackColor = true;
+            rdBtnYes.CheckedChanged += rdBtnYes_CheckedChanged;
             // 
             // pictureBoxEdit
             // 

@@ -122,7 +122,7 @@
             Controls.Add(txtAddMedia);
             Controls.Add(dgvMedia);
             Name = "MediaForm";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Μέσο Προβολής";
             Load += MediaForm_Load;
             ((System.ComponentModel.ISupportInitialize)dgvMedia).EndInit();

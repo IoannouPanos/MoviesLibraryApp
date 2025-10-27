@@ -126,7 +126,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(659, 590);
+            ClientSize = new Size(626, 600);
             ControlBox = false;
             Controls.Add(label1);
             Controls.Add(txtEditCat);
@@ -137,6 +137,7 @@
             Controls.Add(btnAddCat);
             Controls.Add(dgvCategory);
             Name = "CategoryForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Κατηγορίες";
             WindowState = FormWindowState.Maximized;
             Load += CategoryForm_Load;
