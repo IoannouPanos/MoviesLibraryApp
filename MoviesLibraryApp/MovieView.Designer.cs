@@ -44,6 +44,8 @@
             label8 = new Label();
             txtViewActors = new TextBox();
             label7 = new Label();
+            txtViewPlot = new TextBox();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)pbMovieView).BeginInit();
             SuspendLayout();
             // 
@@ -188,11 +190,34 @@
             label7.TabIndex = 16;
             label7.Text = "Ηθοποιοί";
             // 
+            // txtViewPlot
+            // 
+            txtViewPlot.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtViewPlot.Location = new Point(12, 406);
+            txtViewPlot.Multiline = true;
+            txtViewPlot.Name = "txtViewPlot";
+            txtViewPlot.ReadOnly = true;
+            txtViewPlot.ScrollBars = ScrollBars.Vertical;
+            txtViewPlot.Size = new Size(552, 207);
+            txtViewPlot.TabIndex = 18;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 161);
+            label9.Location = new Point(12, 369);
+            label9.Name = "label9";
+            label9.Size = new Size(104, 25);
+            label9.TabIndex = 19;
+            label9.Text = "Περίληψη";
+            // 
             // MovieView
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(582, 374);
+            ClientSize = new Size(582, 625);
+            Controls.Add(label9);
+            Controls.Add(txtViewPlot);
             Controls.Add(txtViewActors);
             Controls.Add(label7);
             Controls.Add(label8);
@@ -213,6 +238,7 @@
             Name = "MovieView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Ταινία";
+            Load += MovieView_Load;
             ((System.ComponentModel.ISupportInitialize)pbMovieView).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -236,5 +262,7 @@
         private Label label8;
         private TextBox txtViewActors;
         private Label label7;
+        private TextBox txtViewPlot;
+        private Label label9;
     }
 }

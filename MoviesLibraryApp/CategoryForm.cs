@@ -32,6 +32,7 @@ namespace MovieLibraryApp
         {
             dgvCategory.DataSource = db.Categories.ToList();
             dgvCategory.Columns["Movies"].Visible = false;  // Κρύβει τη στήλη με τις ταινίες
+            dgvCategory.Columns["Id"].Visible = false;
         }
         // ==========================
         // ΠΡΟΣΘΗΚΗ ΝΕΑΣ ΚΑΤΗΓΟΡΙΑΣ

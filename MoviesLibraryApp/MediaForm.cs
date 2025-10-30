@@ -23,7 +23,9 @@ namespace MovieLibraryApp
         {
             dgvMedia.DataSource = db.Media.ToList();
             dgvMedia.Columns["Movies"].Visible = false;  // Κρύβει τη στήλη με τις ταινίες
+            dgvMedia.Columns["Id"].Visible = false;
         }
+
         // =============================
         // ΠΡΟΣΘΗΚΗ ΝΕΟΥ ΜΕΣΟΥ ΠΡΟΒΟΛΗΣ
         // =============================

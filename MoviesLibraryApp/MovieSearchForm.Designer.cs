@@ -51,12 +51,13 @@
             // 
             // groupBox1
             // 
+            groupBox1.Anchor = AnchorStyles.Top;
             groupBox1.BackColor = SystemColors.Control;
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(cmbSearceCategory);
             groupBox1.Location = new Point(42, 38);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(171, 81);
+            groupBox1.Size = new Size(170, 81);
             groupBox1.TabIndex = 10;
             groupBox1.TabStop = false;
             // 
@@ -79,6 +80,7 @@
             // 
             // groupBox3
             // 
+            groupBox3.Anchor = AnchorStyles.Top;
             groupBox3.BackColor = SystemColors.Control;
             groupBox3.Controls.Add(cmbRating);
             groupBox3.Controls.Add(label3);
@@ -107,6 +109,7 @@
             // 
             // groupBox2
             // 
+            groupBox2.Anchor = AnchorStyles.Top;
             groupBox2.BackColor = SystemColors.Control;
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(cmbSearchPlatform);
@@ -171,6 +174,7 @@
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.Top;
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 161);
             label4.Location = new Point(272, 9);

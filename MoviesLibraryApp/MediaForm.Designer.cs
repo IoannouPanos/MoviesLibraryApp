@@ -84,7 +84,7 @@
             btnEditMedia.Name = "btnEditMedia";
             btnEditMedia.Size = new Size(98, 29);
             btnEditMedia.TabIndex = 4;
-            btnEditMedia.Text = "Επεξεργασία";
+            btnEditMedia.Text = "Αποθήκευση ";
             btnEditMedia.UseVisualStyleBackColor = true;
             btnEditMedia.Click += btnEditMedia_Click;
             // 

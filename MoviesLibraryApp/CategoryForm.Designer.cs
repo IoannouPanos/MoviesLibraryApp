@@ -41,6 +41,7 @@
             // 
             // dgvCategory
             // 
+            dgvCategory.Anchor = AnchorStyles.Top;
             dgvCategory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCategory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvCategory.Location = new Point(70, 306);
@@ -88,7 +89,7 @@
             btnEditCat.Name = "btnEditCat";
             btnEditCat.Size = new Size(134, 39);
             btnEditCat.TabIndex = 4;
-            btnEditCat.Text = "Επεξεργασία";
+            btnEditCat.Text = "Αποθήκευση Αλλαγών";
             btnEditCat.UseVisualStyleBackColor = true;
             btnEditCat.Click += btnEditCat_Click;
             // 

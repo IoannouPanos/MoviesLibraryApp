@@ -24,7 +24,7 @@ namespace MoviesLibraryApp
             dgvDelMovie.DataSource = db.Movies
                 .Select(m => new
                 {
-                    m.Id,
+                    //m.Id,
                     m.Title,
                 }).ToList();
 
@@ -40,6 +40,7 @@ namespace MoviesLibraryApp
             cmbMovies.DisplayMember = "Title";
             cmbMovies.ValueMember = "Id";
             cmbMovies.SelectedIndex = -1; // κανένα default
+
         }
 
 
